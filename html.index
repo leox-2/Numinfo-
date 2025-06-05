@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NumInfo - Phone Number Lookup</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>📱 NumInfo</h1>
+        
+        <form id="numForm">
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    placeholder="e.g., 8801712345678"
+                    required
+                    pattern="[0-9]+"
+                />
+            </div>
+            
+            <button type="submit" class="btn" id="lookupBtn">
+                🔍 Lookup Number Info
+            </button>
+        </form>
+
+        <div class="example">
+            <h4>💡 Example Format</h4>
+            <p>Enter number like: <strong>8801712345678</strong> (Bangladesh format)<br/>
+            Include country code for best results</p>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; color: #667eea;">Looking up number info...</p>
+        </div>
+
+        <div class="result" id="result">
+            <div class="sim-company" id="simCompany">
+                📡 SIM Company: -
+            </div>
+            
+            <div class="result-header">
+                <img id="carrierImage" class="result-image" src="" alt="Carrier Logo" />
+                <div class="result-info">
+                    <h3 id="carrierName">-</h3>
+                    <p id="phoneType">-</p>
+                </div>
+            </div>
+            <div class="carrier-badge" id="carrierBadge">-</div>
+        </div>
+
+        <div class="error" id="error">
+            ❌ Unable to fetch number information. Please check the number and try again.
+        </div>
+    </div>
+
+    <!-- Made by RL Credit -->
+    <div class="credit">
+        Made by RL ❤️
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
